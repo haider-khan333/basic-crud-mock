@@ -38,10 +38,11 @@ function NavBar() {
             navbarScroll
           >
             <Nav.Link href="/add">Add User</Nav.Link>
+            
 
             <NavDropdown title="My Account" id="navbarScrollingDropdown">
               <NavDropdown.Item href="/myprofile">Profile</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">Edit Details</NavDropdown.Item>
+              <NavDropdown.Item href="/editprofile">Edit Details</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item
                 href="/login"

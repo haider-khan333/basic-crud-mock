@@ -1,8 +1,15 @@
 //create a component where the id fo a user will be passed as a prop and the details of that user will be displayed on specified text boxes. then the client can edit those details and save it
-
-
 import React, { useState, useEffect } from "react";
 import { Form, Button } from "react-bootstrap";
+import {
+    MDBContainer,
+    MDBRow,
+    MDBCol,
+    MDBCard,
+    MDBCardBody,
+    MDBInput,
+    MDBBtn,
+  } from "mdb-react-ui-kit";
 import { useNavigate,useParams } from "react-router-dom";
 
 const EditUser = (props) => {
@@ -68,59 +75,71 @@ const EditUser = (props) => {
     };
     
     return (
-        <div className="container mt-5">
-            <h2>Edit User Details</h2>
-        <Form onSubmit={editUser}>
-            <Form.Group controlId="formBasicEmail">
-            <Form.Label>Name</Form.Label>
-            <Form.Control
-                type="text"
-                placeholder="Enter name"
-                value={name}
-                name="name"
-                onChange={(e) => setName(e.target.value)}
-            />
-            </Form.Group>
-    
-            <Form.Group controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control
-                type="email"
-                placeholder="Enter email"
-                value={email}
-                name="email"
-                onChange={(e) => setEmail(e.target.value)}
-            />
-            </Form.Group>
-    
-            <Form.Group controlId="formBasicPassword">
-            <Form.Label>Designation</Form.Label>
-            <Form.Control
-                type="text"
-                placeholder="Enter designation"
-                value={designation}
-                name="designation"
-                onChange={(e) => setDesignation(e.target.value)}
-            />
-            </Form.Group>
-
-            <Form.Group controlId="formBasicPassword">
-            <Form.Label>Salary</Form.Label>
-            <Form.Control
-                type="text"
-                placeholder="Enter salary"
-                value={salary}
-                name="salary"
-                onChange={(e) => setSalary(e.target.value)}
-            />
-            </Form.Group>
-
-            <br />
-            <Button variant="primary" type="submit">
-            Edit
-            </Button>
-        </Form>
-        </div>
+        <form onSubmit={editUser} style={{ minHeight:"100%" }}>
+        <MDBContainer fluid className="mdb-container">
+          <MDBRow className="d-flex justify-content-center align-items-center h-100">
+            <MDBCol col="12">
+              <MDBCard
+                className="bg-white my-5 mx-auto"
+                style={{ borderRadius: "1rem", maxWidth: "60%" }}
+              >
+                <MDBCardBody className="p-5 w-100 d-flex flex-column">
+                  <h2 className="fw-bold mb-5">
+                    Change user details 
+                  </h2>
+  
+                  <MDBInput
+                    wrapperClass="mb-4 w-100"
+                    value={name}
+                    label="Name"
+                    id="formControlLg"
+                    type="name"
+                    name="name"
+                    size="lg"
+                    onChange={(e) => setName(e.target.value)}
+                  />
+  
+                  <MDBInput
+                    wrapperClass="mb-4 w-100"
+                    label="Email address"
+                    id="formControlLg"
+                    type="email"
+                    name="email"
+                    size="lg"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+  
+                  <MDBInput
+                    wrapperClass="mb-4 w-100"
+                    label="Designation"
+                    id="formControlLg"
+                    type="designation"
+                    name="designation"
+                    size="lg"
+                    value={designation}
+                    onChange={(e) => setDesignation(e.target.value)}
+                  />
+  
+                  <MDBInput
+                    wrapperClass="mb-4 w-100"
+                    label="Salary"
+                    id="formControlLg"
+                    type="number"
+                    name="salary"
+                    size="lg"
+                    value={salary}
+                    onChange={(e) => setSalary(e.target.value)}
+                  />
+                  <MDBBtn size="lg" color="success">
+                    Edit
+                  </MDBBtn>
+                </MDBCardBody>
+              </MDBCard>
+            </MDBCol>
+          </MDBRow>
+        </MDBContainer>
+      </form>
     );
 };
 

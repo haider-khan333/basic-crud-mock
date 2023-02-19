@@ -55,7 +55,7 @@ const MyProfile = () => {
                 </div>
                 <div className="ms-3" style={{ marginTop: "130px" }}>
                   <MDBTypography tag="h5">{data.name}</MDBTypography>
-                  <MDBCardText>{data.name}</MDBCardText>
+                  <MDBCardText>{data.email}</MDBCardText>
                 </div>
               </div>
               <div
@@ -86,14 +86,14 @@ const MyProfile = () => {
                 <MDBRow>
                   <MDBCol className="mb-2">
                     <MDBCardImage
-                      src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp"
+                      src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(91).webp"
                       alt="image 1"
                       className="w-100 rounded-3"
                     />
                   </MDBCol>
                   <MDBCol className="mb-2">
                     <MDBCardImage
-                      src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(107).webp"
+                      src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(90).webp"
                       alt="image 1"
                       className="w-100 rounded-3"
                     />
@@ -102,14 +102,14 @@ const MyProfile = () => {
                 <MDBRow className="g-2">
                   <MDBCol className="mb-2">
                     <MDBCardImage
-                      src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(108).webp"
+                      src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(102).webp"
                       alt="image 1"
                       className="w-100 rounded-3"
                     />
                   </MDBCol>
                   <MDBCol className="mb-2">
                     <MDBCardImage
-                      src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(114).webp"
+                      src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(97).webp"
                       alt="image 1"
                       className="w-100 rounded-3"
                     />

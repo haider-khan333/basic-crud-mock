@@ -1,15 +1,17 @@
 //using bootstrap, show all the users in a table and also add a button to delete and edit the user
 
 import React, { useState, useEffect } from "react";
-import { Table, Button } from "react-bootstrap";
+import { Table, Button, Spinner } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import CustomSpinner from "./Spinner";
+
 // import users from "../Models/User";
 
 const UserList = () => {
   const navigate = useNavigate();
 
   const [usersList, setUsersList] = useState([]);
-
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const fetchUsers = async () => {
       const response = await fetch(
@@ -17,6 +19,7 @@ const UserList = () => {
       );
       const data = await response.json();
       setUsersList(data);
+      setLoading(false);
     };
 
     fetchUsers();
@@ -29,8 +32,14 @@ const UserList = () => {
       setUsersList(usersList.filter((user) => user.id !== id));
     });
   };
+
+  if (loading) {
+    return (
+        <CustomSpinner/>
+    );
+  }
   return (
-    <div>
+    <div style={{ minHeight:"100%" }}>
       <Table striped bordered hover>
         <thead>
           <tr>

@@ -54,7 +54,7 @@ function SignUp() {
             }
             const responseData = await response.json();
             console.log(responseData);
-            alert("User Created Successfully");
+            alert("Admin Created Successfully");
             navigate("/login");
           } catch (error) {
             console.error(error);
