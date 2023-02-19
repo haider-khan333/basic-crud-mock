@@ -61,8 +61,8 @@ const EditProfile = () => {
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
-    alert("User updated successfully");
-    navigate("/");
+    alert("Admin details updated successfully");
+    navigate("/peeps");
   };
 
   return (

@@ -44,7 +44,7 @@ const AddUser = () => {
 
       const responseData = await response.json();
       console.log(responseData);
-        navigate("/");
+        navigate("/peeps");
     } catch (error) {
       console.error(error);
     }
@@ -71,6 +71,7 @@ const AddUser = () => {
                   type="name"
                   name="name"
                   size="lg"
+                  required
                   onChange={(e) => setName(e.target.value)}
                 />
 
@@ -81,6 +82,7 @@ const AddUser = () => {
                   type="email"
                   name="email"
                   size="lg"
+                  required
                   onChange={(e) => setEmail(e.target.value)}
                 />
 
@@ -91,6 +93,7 @@ const AddUser = () => {
                   type="designation"
                   name="designation"
                   size="lg"
+                  required
                   onChange={(e) => setDesignation(e.target.value)}
                 />
 
@@ -101,6 +104,7 @@ const AddUser = () => {
                   type="number"
                   name="salary"
                   size="lg"
+                  required
                   onChange={(e) => setSalary(e.target.value)}
                 />
                 <MDBBtn size="lg" color="success">

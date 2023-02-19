@@ -7,29 +7,11 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
 function NavBar() {
-  const [searchQuery, setSearchQuery] = React.useState("");
-  const [data, setData] = React.useState([]);
-
-  React.useEffect(() => {
-    fetch("https://63ecae31be929df00cafceb5.mockapi.io/users")
-      .then((response) => response.json())
-      .then((data) => {
-        setData(
-          data.filter((item) =>
-            item.name.toLowerCase().includes(searchQuery.toLowerCase())
-          )
-        );
-      });
-  }, [searchQuery]);
-
-  function handleSearch(event) {
-    setSearchQuery(event.target.value);
-  }
 
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="/">Peeps</Navbar.Brand>
+        <Navbar.Brand href="/peeps">Peeps</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -57,17 +39,7 @@ function NavBar() {
             </NavDropdown>
           </Nav>
 
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-              onChange={handleSearch}
-              value={searchQuery}
-            />
-            <Button variant="outline-success">Search</Button>
-          </Form>
+   
         </Navbar.Collapse>
       </Container>
     </Navbar>

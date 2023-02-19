@@ -68,7 +68,7 @@ const EditUser = (props) => {
     
         const responseData = await response.json();
         console.log(responseData);
-        navigate("/");
+        navigate("/peeps");
         } catch (error) {
         console.error(error);
         }

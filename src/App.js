@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap";
 import NavBar from "./Components/NavBar";
 import AddUser from "./Components/AddUser";
 import UserList from "./Components/UserList";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route,Navigate } from "react-router-dom";
 import EditUser from "./Components/EditUser";
 import Login from "./Components/Login";
 import SignUp from "./Components/SignUp";
@@ -18,9 +18,10 @@ function App() {
     <Router>
       <NavBar />
       <Routes>
+        <Route path="/" element={<Navigate to="/login"/>} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/" element={<UserList />} />
+        <Route path="/peeps" element={<UserList />} />
         <Route path="/add" element={<AddUser />} />
         <Route path="/edit/:id" element={<EditUser />} />
         <Route path="/myprofile" element={<MyProfile />} />

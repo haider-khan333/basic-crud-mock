@@ -51,7 +51,7 @@ const Login = () => {
         localStorage.clear();
         localStorage.setItem("userID", id);
 
-      navigate("/");
+      navigate("/peeps");
     } else if (!user || user.password !== formData.get("password")) {
       alert("Incorrect email or password");
       navigate("/login");

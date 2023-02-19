@@ -73,7 +73,7 @@ const Footer = () => {
                 </a>
               </p>
               <p>
-                <a href="/" className="text-reset">
+                <a href="/peeps" className="text-reset">
                   Users
                 </a>
               </p>
@@ -112,7 +112,7 @@ const Footer = () => {
         style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}
       >
         © 2022 Copyright:
-        <a className="text-reset fw-bold" href="/">
+        <a className="text-reset fw-bold" href="/peeps">
           Peeps.com
         </a>
       </div>
